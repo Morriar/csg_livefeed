@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	-var now = new Date().getTime()
+
+	h1 Competitions
+
+	table.table
+		tr
+			th Status
+			th Competition
+			th Start
+			th End
+		each compe in compes
+			-var sat = new Date(compe.startAt).getTime()
+			-var eat = new Date(compe.endAt).getTime()
+			tr
+				td
+					if eat < now
+						span.glyphicon.glyphicon-off.text-muted
+						span &nbsp;Ended
+					else if sat < now
+						span.glyphicon.glyphicon-off.text-success
+						span &nbsp;Started
+					else
+						span.glyphicon.glyphicon-off.text-danger
+						span &nbsp;Not Started
+				td
+					a(href='/compes/#{compe.id}')= compe.title
+				td= compe.startAt
+				td= compe.endAt

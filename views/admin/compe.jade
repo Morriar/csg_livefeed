@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+	.container-fluid
+
+		.panel.panel-default
+			.panel-body
+				h1= compe.title
+
+				.countstyle
+					#countdown(data-date=compe.startAt)
+
+		.panel.panel-default
+			.panel-body
+				form(action='/admin/compes/' + compe.id + '/cams' method='POST')
+					.col-xs-10
+						input.form-control(type='text' name='url' placeholder='http://10.0.0.1/stream')
+					.col-xs-2
+						button.btn.btn-success(type='submit') Add
+
+		.panel.panel-default
+			.panel-body
+				each cam in cams
+					.video-tile.col-xs-4.text-center
+						img.feed(src=cam.url width='100%')
+						br
+						a.btn.btn-link(href='/admin/compes/#{compe.id}/cams/delete/#{cam._id}') Remove

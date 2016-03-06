@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+	.container-fluid
+		.row
+			.col-xs-4
+				.panel.panel-default
+					.panel-body
+						h1.text-center
+							a(href='/compes/#{compe.id}/')= compe.title
+				.panel.panel-default
+					.panel-body
+						.countstyle
+							#countdown(data-date=compe.startAt)
+			.col-xs-8
+				.panel.panel-default
+					.panel-body
+						each cam in cams
+							.video-tile.text-center
+								img.cycle.feed(src=cam.url width='100%')

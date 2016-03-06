@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+	.container-fluid
+		.row
+			.col-xs-8
+				.panel.panel-default
+					.panel-body
+						h1= compe.title
+			.col-xs-4
+				.panel.panel-default
+					.panel-body
+						.countstyle
+							#countdown(data-date=compe.startAt)
+		.row
+			.col-xs-12
+				.panel.panel-default
+					.panel-body
+						.video-tile.text-center
+							img.feed(src=cam.url width='100%')
