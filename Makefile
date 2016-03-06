@@ -22,5 +22,8 @@ install-deps:
 install:
 	npm install
 
+resetdata:
+	node loadCompes.js data/compes.json
+
 run:
 	npm start
