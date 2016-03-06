@@ -1,0 +1,73 @@
+[
+	{
+		"id": "algo",
+		"title": "Algorithms",
+		"startAt": "March 11, 2016 19:30:00",
+		"endAt": "March 11, 2016 22:30:00"
+	}, {
+		"id": "ai1",
+		"title": "Artificial Intelligence",
+		"startAt": "March 11, 2016 19:30:00",
+		"endAt": "March 11, 2016 22:30:00"
+	}, {
+		"id": "xp",
+		"title": "Extreme Programming",
+		"startAt": "March 11, 2016 19:30:00",
+		"endAt": "March 11, 2016 22:30:00"
+	}, {
+		"id": "ai2",
+		"title": "Artificial Intelligence",
+		"startAt": "March 12, 2016 09:00:00",
+		"endAt": "March 12, 2016 12:00:00"
+	}, {
+		"id": "os",
+		"title": "Operating System",
+		"startAt": "March 12, 2016 09:00:00",
+		"endAt": "March 12, 2016 12:00:00"
+	}, {
+		"id": "web",
+		"title": "Web Development",
+		"startAt": "March 12, 2016 09:00:00",
+		"endAt": "March 12, 2016 12:00:00"
+	}, {
+		"id": "para",
+		"title": "Parallelism",
+		"startAt": "March 12, 2016 13:30:00",
+		"endAt": "March 12, 2016 16:30:00"
+	}, {
+		"id": "relay",
+		"title": "Relay Programming",
+		"startAt": "March 12, 2016 13:30:00",
+		"endAt": "March 12, 2016 16:30:00"
+	}, {
+		"id": "theoretical",
+		"title": "Theoretical",
+		"startAt": "March 12, 2016 13:30:00",
+		"endAt": "March 12, 2016 16:30:00"
+	}, {
+		"id": "debug",
+		"title": "Debugging",
+		"startAt": "March 12, 2016 18:00:00",
+		"endAt": "March 12, 2016 21:00:00"
+	}, {
+		"id": "mobile",
+		"title": "Mobile",
+		"startAt": "March 12, 2016 18:00:00",
+		"endAt": "March 12, 2016 21:00:00"
+	}, {
+		"id": "tse",
+		"title": "Team Software Engineering",
+		"startAt": "March 12, 2016 18:00:00",
+		"endAt": "March 12, 2016 21:00:00"
+	}, {
+		"id": "compil",
+		"title": "Compiling",
+		"startAt": "March 13, 2016 09:00:00",
+		"endAt": "March 13, 2016 12:00:00"
+	}, {
+		"id": "reverse",
+		"title": "Reverse Engineering",
+		"startAt": "March 13, 2016 09:00:00",
+		"endAt": "March 13, 2016 12:00:00"
+	}
+]
