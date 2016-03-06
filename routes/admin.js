@@ -16,9 +16,48 @@
 
 var express = require('express');
 var router = express.Router();
+var dbcompes = require('../model/compes');
+var dbcams = require('../model/cams');
 
 router.get('/', function(req, res, next) {
-	res.render('admin/index');
+	dbcompes.find({}, function (compes) {
+		res.render('admin/index', { compes: compes });
+	});
+});
+
+router.get('/compes/:cid', function(req, res, next) {
+	var cid = req.params.cid;
+	if(!cid) {
+		res.redirect('/admin/');
+		return;
+	}
+	dbcompes.findOne(cid, function(compe) {
+		dbcams.find({compe: cid}, function(cams) {
+			res.render('admin/compe', { compe: compe, cams: cams });
+		});
+	});
+});
+
+router.post('/compes/:cid/cams', function(req, res, next) {
+	var cid = req.params.cid;
+	var url = req.body.url;
+	if(!cid || !url) {
+		res.redirect('/admin/');
+		return;
+	}
+	dbcams.save(dbcams.create(url, cid));
+	res.redirect('/admin/compes/' + cid);
+});
+
+router.get('/compes/:cid/cams/delete/:url', function(req, res, next) {
+	var cid = req.params.cid;
+	var url = req.params.url;
+	if(!cid || !url) {
+		res.redirect('/admin/compe');
+		return;
+	}
+	dbcams.remove(url);
+	res.redirect('/admin/compes/' + cid);
 });
 
 module.exports = router;
