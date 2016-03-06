@@ -65,4 +65,17 @@ router.get('/compes/:cid/cams/:cam', function(req, res, next) {
 	});
 });
 
+router.get('/login', function(req, res, next) {
+	res.render('login');
+});
+
+router.post('/login', function(req, res, next) {
+	if(req.body.user == 'admin' && req.body.pass == 'blackminoutte') {
+		req.session.admin = true;
+		res.redirect('/admin');
+		return;
+	}
+	res.redirect('/login');
+});
+
 module.exports = router;
