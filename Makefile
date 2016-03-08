@@ -23,7 +23,7 @@ install:
 	npm install
 
 resetdata:
-	node loadCompes.js data/compes.json
+	nodejs loadCompes.js data/compes.json
 
 run:
 	npm start
